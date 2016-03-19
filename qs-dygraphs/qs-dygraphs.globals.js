@@ -368,7 +368,6 @@ function addOptions(layout, data, options, measures) {
 
 // Create a dygraph object
 function qsDygraph(id, layout, data, measures) {
-
     var options, g;
 
     // Apply property panel settings to dygraphs options
@@ -410,6 +409,7 @@ function qsDygraph(id, layout, data, measures) {
         xlabel                 : layout.props.xlabel,
         ylabel                 : layout.props.ylabel,
         y2label                : layout.props.y2label,
+        fillAlpha              : layout.props.fillAlpha || "0.15",
         axes : {
             x : { drawGrid : layout.props.drawXGrid },
             y : { drawGrid : layout.props.drawYGrid }
@@ -629,6 +629,7 @@ function renderM($element, layout, fullMatrix) {
             'color'               : d.props.color,
             'drawPoints'          : d.props.drawPoints,
             'fillGraph'           : d.props.fillGraph,
+            'fillAlpha'           : d.props.fillAlpha || '0.1',
             'highlightCircleSize' : d.props.highlightCircleSize === '' ? 3
                                   : +d.props.highlightCircleSize,
             'plotter'             : d.props.plotter === 'bar'   ? barChartPlotter

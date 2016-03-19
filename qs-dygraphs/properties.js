@@ -67,6 +67,7 @@ define([], function () {
         }],
         defaultValue: false
     };
+
     var seriesFillGraph = {
         type: "boolean",
         component: "switch",
@@ -81,6 +82,13 @@ define([], function () {
         }],
         defaultValue: false
     };
+    var seriesFillAlpha = {
+        type: "string",
+        ref: "qDef.props.fillAlpha",
+        label: "Fill Alpha",
+        defaultValue: "0.15"
+    };
+
     var seriesStepPlot = {
         type: "boolean",
         component: "switch",
@@ -174,6 +182,7 @@ define([], function () {
             seriesDrawPoints: seriesDrawPoints,
             // seriesCustomBars: seriesCustomBars,
             seriesFillGraph: seriesFillGraph,
+            seriesFillAlpha: seriesFillAlpha,
             seriesStepPlot: seriesStepPlot,
             // Data Series Line Properties
             seriesStrokePattern: seriesStrokePattern,
@@ -308,6 +317,13 @@ define([], function () {
         }],
         defaultValue: false
     };
+    var fillAlpha = {
+        type: "string",
+        ref: "props.fillAlpha",
+        label: "Fill Alpha",
+        defaultValue: "0.15"
+    };
+
     var stackedGraph = {
         type: "boolean",
         component: "switch",
@@ -744,6 +760,7 @@ define([], function () {
             connectSeparatedPoints: connectSeparatedPoints,
             customBars: customBars,
             fillGraph: fillGraph,
+            fillAlpha: fillAlpha,
             stackedGraph: stackedGraph,
             stepPlot: stepPlot
         }
